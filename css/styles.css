@@ -1,0 +1,85 @@
+*{
+    font-family: 'Lobster', cursive;
+    transform-style: preserve-3d; /* Indicates that the children of the element should be positioned in the 3D-space. */
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background-color: rgb(208, 255, 239); */
+    background-image: url(../assets/images/bg.jpg);
+    background-size: cover;
+    
+}
+
+.container{
+    position: relative;
+    column-count: 4;
+    padding: 20px;
+}
+
+.image{
+    display: inline-block;
+    margin-bottom: 10px;
+    overflow: hidden; /*Content is clipped if necessary to fit the padding box*/
+}
+
+img{
+    width: 100%;
+    transition: 0.6s ease-in-out;
+}
+
+.image:hover img{
+    transform: scale(1.1);
+}
+
+h1{
+    position: absolute;
+    padding: 5px;
+    margin: 5px;
+    font-size: 20px;
+    background: dimgray;
+    color: ghostwhite;
+    border-radius: 5px;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+
+}
+
+.image:hover h1{
+    opacity:0.7;
+
+}
+
+@media screen and (max-width:1024px){
+    h1{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .container {
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width:425px){
+    .container {
+        column-count: 2;
+    }
+    h1{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:375px){
+    .container {
+        column-count: 1;
+    }
+    h1{
+        font-size: 9px;
+    }
+}
+
+
